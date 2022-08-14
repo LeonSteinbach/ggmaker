@@ -1,6 +1,6 @@
 #include <GLFW/glfw3.h>
 
-#include "application.h"
+#include "ggmaker/core/application.h"
 
 namespace gg {
 
@@ -9,6 +9,18 @@ namespace gg {
 	Application::~Application() {}
 
 	void Application::Run() {
+
+	}
+
+	void Application::Init() {
+
+	}
+
+	void Application::Update() {
+
+	}
+
+	void Application::Render() {
 
 	}
 

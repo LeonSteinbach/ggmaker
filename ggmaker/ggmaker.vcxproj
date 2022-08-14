@@ -11,12 +11,36 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\ggmaker\application.h" />
+    <ClInclude Include="src\ggmaker\core\time.h" />
+    <ClInclude Include="src\ggmaker\events\event.h" />
+    <ClInclude Include="src\ggmaker\events\application_event.h" />
+    <ClInclude Include="src\ggmaker\events\key_event.h" />
+    <ClInclude Include="src\ggmaker\events\mouse_event.h" />
+    <ClInclude Include="src\ggmaker\math\math.h" />
+    <ClInclude Include="src\ggmaker\scene\node.h" />
+    <ClInclude Include="src\ggmaker\scene\scene.h" />
+    <ClInclude Include="src\ggmaker\core\application.h" />
     <ClInclude Include="src\ggmaker.h" />
     <ClInclude Include="src\ggmaker\core.h" />
+    <ClInclude Include="src\ggmaker\core\layer.h" />
+    <ClInclude Include="src\ggmaker\core\layer_stack.h" />
+    <ClInclude Include="src\ggmaker\core\log.h" />
+    <ClInclude Include="src\ggmaker\core\window.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\ggmaker\application.cpp" />
+    <ClCompile Include="src\ggmaker\core\time.cpp" />
+    <ClCompile Include="src\ggmaker\events\application_event.cpp" />
+    <ClCompile Include="src\ggmaker\events\event.cpp" />
+    <ClCompile Include="src\ggmaker\events\key_event.cpp" />
+    <ClCompile Include="src\ggmaker\events\mouse_event.cpp" />
+    <ClCompile Include="src\ggmaker\math\math.cpp" />
+    <ClCompile Include="src\ggmaker\scene\node.cpp" />
+    <ClCompile Include="src\ggmaker\scene\scene.cpp" />
+    <ClCompile Include="src\ggmaker\core\application.cpp" />
+    <ClCompile Include="src\ggmaker\core\layer.cpp" />
+    <ClCompile Include="src\ggmaker\core\layer_stack.cpp" />
+    <ClCompile Include="src\ggmaker\core\log.cpp" />
+    <ClCompile Include="src\ggmaker\core\window.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -67,7 +91,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GG_PLATFORM_WINDOWS;GG_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\GLFW\include;$(ProjectDir)\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -84,7 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GG_PLATFORM_WINDOWS;GG_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\GLFW\include;$(ProjectDir)\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
