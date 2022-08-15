@@ -7,17 +7,25 @@
 
 #include "ggmaker.h"
 
-class Sandbox : public gg::Application {
+class Sandbox : public gg::Application
+{
 public:
-	Sandbox() {}
-	~Sandbox() {}
+	Sandbox()
+	{
+	}
 
-	void run() override {
+	~Sandbox() override
+	{
+	}
+
+	void run() override
+	{
 		Application::run();
 	}
 };
 
-int main() {
+int main()
+{
 	/*
 	GLFWwindow* window;
 
@@ -71,7 +79,7 @@ int main() {
 	*/
 
 	// Application
-	Sandbox* app = new Sandbox();
+	auto app = new Sandbox();
 	app->run();
 
 	delete app;

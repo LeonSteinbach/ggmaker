@@ -2,10 +2,13 @@
 
 #include <iostream>
 
-namespace gg {
-	class Log {
+namespace gg
+{
+	class Log
+	{
 	public:
-		static enum class LogLevel {
+		static enum class LogLevel
+		{
 			TRACE,
 			DEBUG,
 			INFO,
@@ -29,7 +32,6 @@ namespace gg {
 		void error(std::string text);
 		void fatal(std::string text);
 	};
-
 }
 
 #define GG_LOG_INIT(...)    ::gg::Log::getInstance().init(__VA_ARGS__)
