@@ -1,4 +1,5 @@
 #include <GLFW/glfw3.h>
+#include <iostream>
 
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
@@ -16,8 +17,8 @@ public:
 	}
 };
 
-
-int main() {/*
+int main() {
+	/*
 	GLFWwindow* window;
 
 	if (!glfwInit())
@@ -68,11 +69,14 @@ int main() {/*
 
 	glfwTerminate();
 	*/
+
 	// Application
 	Sandbox* app = new Sandbox();
 	app->run();
 
 	delete app;
+
+	std::cin.get();
 
 	return 0;
 }

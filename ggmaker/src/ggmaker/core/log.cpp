@@ -10,11 +10,11 @@ namespace gg {
 	}
 
 	void Log::init(LogLevel logLevel) {
-		std::cout << (int) logLevel << std::endl;
 		this->logLevel = logLevel;
 	}
 
 	void Log::trace(std::string text) {
+		if (logLevel <= LogLevel::TRACE)
 			std::cout << text << std::endl;
 	}
 

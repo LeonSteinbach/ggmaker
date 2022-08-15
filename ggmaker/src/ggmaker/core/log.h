@@ -32,7 +32,7 @@ namespace gg {
 
 }
 
-#define GG_LOG_INIT(...)       ::gg::Log::getInstance().init(__VA_ARGS__)
+#define GG_LOG_INIT(...)    ::gg::Log::getInstance().init(__VA_ARGS__)
 
 #define GG_LOG_TRACE(...)   ::gg::Log::getInstance().trace(__VA_ARGS__)
 #define GG_LOG_DEBUG(...)   ::gg::Log::getInstance().debug(__VA_ARGS__)
