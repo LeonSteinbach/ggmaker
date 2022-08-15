@@ -10,10 +10,14 @@ class Sandbox : public gg::Application {
 public:
 	Sandbox() {}
 	~Sandbox() {}
+
+	void run() override {
+		Application::run();
+	}
 };
 
 
-int main() {
+int main() {/*
 	GLFWwindow* window;
 
 	if (!glfwInit())
@@ -63,10 +67,10 @@ int main() {
 	ImGui::DestroyContext();
 
 	glfwTerminate();
-
+	*/
 	// Application
 	Sandbox* app = new Sandbox();
-	app->Run();
+	app->run();
 
 	delete app;
 

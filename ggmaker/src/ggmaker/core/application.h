@@ -5,16 +5,14 @@
 namespace gg {
 
 	class GG_API Application {
-	private:
-		// Scene manager
 	protected:
-		void Init();
-		void Update();
-		void Render();
+		void init();
+		void update();
+		void render();
 	public:
 		Application();
 		virtual ~Application();
 
-		void Run();
+		virtual void run();
 	};
 }

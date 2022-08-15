@@ -1,6 +1,9 @@
 #include <GLFW/glfw3.h>
 
 #include "ggmaker/core/application.h"
+#include "ggmaker/core/log.h"
+
+#include <iostream>
 
 namespace gg {
 
@@ -8,19 +11,21 @@ namespace gg {
 
 	Application::~Application() {}
 
-	void Application::Run() {
+	void Application::run() {
+		GG_LOG_INIT(Log::LogLevel::TRACE);
+
+		GG_LOG_TRACE("test");
+	}
+
+	void Application::init() {
 
 	}
 
-	void Application::Init() {
+	void Application::update() {
 
 	}
 
-	void Application::Update() {
-
-	}
-
-	void Application::Render() {
+	void Application::render() {
 
 	}
 
