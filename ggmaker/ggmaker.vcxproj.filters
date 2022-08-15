@@ -1,105 +1,106 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Quelldateien">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Headerdateien">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Ressourcendateien">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\ggmaker.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ggmaker\core\application.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ggmaker\core.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ggmaker\core\layer.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ggmaker\core\window.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ggmaker\core\layer_stack.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ggmaker\core\log.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ggmaker\scene\scene.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ggmaker\scene\node.h">
-      <Filter>Headerdateien</Filter>
+    <ClInclude Include="src\ggmaker\core\time.h">
+      <Filter>ggmaker\core</Filter>
     </ClInclude>
     <ClInclude Include="src\ggmaker\events\event.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>ggmaker\events</Filter>
     </ClInclude>
     <ClInclude Include="src\ggmaker\events\application_event.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>ggmaker\events</Filter>
     </ClInclude>
     <ClInclude Include="src\ggmaker\events\key_event.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>ggmaker\events</Filter>
     </ClInclude>
     <ClInclude Include="src\ggmaker\events\mouse_event.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>ggmaker\events</Filter>
     </ClInclude>
     <ClInclude Include="src\ggmaker\math\math.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>ggmaker\math</Filter>
     </ClInclude>
-    <ClInclude Include="src\ggmaker\core\time.h">
-      <Filter>Headerdateien</Filter>
+    <ClInclude Include="src\ggmaker\scene\node.h">
+      <Filter>ggmaker\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggmaker\scene\scene.h">
+      <Filter>ggmaker\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggmaker\core\application.h">
+      <Filter>ggmaker\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggmaker.h" />
+    <ClInclude Include="src\ggmaker\core.h">
+      <Filter>ggmaker</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggmaker\core\layer.h">
+      <Filter>ggmaker\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggmaker\core\layer_stack.h">
+      <Filter>ggmaker\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggmaker\core\log.h">
+      <Filter>ggmaker\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggmaker\core\window.h">
+      <Filter>ggmaker\core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\ggmaker\core\application.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ggmaker\core\layer.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ggmaker\core\window.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ggmaker\core\layer_stack.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ggmaker\core\log.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ggmaker\scene\scene.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ggmaker\scene\node.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ggmaker\events\event.cpp">
-      <Filter>Quelldateien</Filter>
+    <ClCompile Include="src\ggmaker\core\time.cpp">
+      <Filter>ggmaker\core</Filter>
     </ClCompile>
     <ClCompile Include="src\ggmaker\events\application_event.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>ggmaker\events</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggmaker\events\event.cpp">
+      <Filter>ggmaker\events</Filter>
     </ClCompile>
     <ClCompile Include="src\ggmaker\events\key_event.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>ggmaker\events</Filter>
     </ClCompile>
     <ClCompile Include="src\ggmaker\events\mouse_event.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>ggmaker\events</Filter>
     </ClCompile>
     <ClCompile Include="src\ggmaker\math\math.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>ggmaker\math</Filter>
     </ClCompile>
-    <ClCompile Include="src\ggmaker\core\time.cpp">
-      <Filter>Quelldateien</Filter>
+    <ClCompile Include="src\ggmaker\scene\node.cpp">
+      <Filter>ggmaker\scene</Filter>
     </ClCompile>
+    <ClCompile Include="src\ggmaker\scene\scene.cpp">
+      <Filter>ggmaker\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggmaker\core\application.cpp">
+      <Filter>ggmaker\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggmaker\core\layer.cpp">
+      <Filter>ggmaker\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggmaker\core\layer_stack.cpp">
+      <Filter>ggmaker\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggmaker\core\log.cpp">
+      <Filter>ggmaker\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggmaker\core\window.cpp">
+      <Filter>ggmaker\core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ggmaker">
+      <UniqueIdentifier>{0c6cc304-1051-4e99-aa07-bb6ae48fdc9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ggmaker\core">
+      <UniqueIdentifier>{98fab927-64aa-4bb7-8150-9a6f80604f16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ggmaker\events">
+      <UniqueIdentifier>{579a57fd-3184-4dc1-8bda-4167b6fb5fa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ggmaker\math">
+      <UniqueIdentifier>{d32b8665-5621-41b5-a4fb-a0ce47fc897a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ggmaker\scene">
+      <UniqueIdentifier>{20d5b917-945e-4a11-9a61-07522b598cff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
