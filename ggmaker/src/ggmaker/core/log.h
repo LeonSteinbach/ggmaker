@@ -7,7 +7,7 @@ namespace gg
 	class Log
 	{
 	public:
-		static enum class LogLevel
+		enum class LogLevel
 		{
 			TRACE,
 			DEBUG,
@@ -20,17 +20,47 @@ namespace gg
 
 	private:
 		static Log instance;
-		LogLevel logLevel;
+		LogLevel logLevel = LogLevel::TRACE;
+
 	public:
 		static Log& getInstance();
 		void init(LogLevel logLevel);
 
-		void trace(std::string text);
-		void debug(std::string text);
-		void info(std::string text);
-		void warning(std::string text);
-		void error(std::string text);
-		void fatal(std::string text);
+		template<typename T> void trace(T& object)
+		{
+			if (logLevel <= LogLevel::TRACE)
+				std::cout << object << std::endl;
+		}
+
+		template<typename T> void debug(T& object)
+		{
+			if (logLevel <= LogLevel::DEBUG)
+				std::cout << object << std::endl;
+		}
+
+		template<typename T> void info(T& object)
+		{
+			if (logLevel <= LogLevel::INFO)
+				std::cout << object << std::endl;
+		}
+
+		template<typename T> void warning(T& object)
+		{
+			if (logLevel <= LogLevel::WARNING)
+				std::cout << object << std::endl;
+		}
+
+		template<typename T> void error(T& object)
+		{
+			if (logLevel <= LogLevel::ERROR)
+				std::cout << object << std::endl;
+		}
+
+		template<typename T> void fatal(T& object)
+		{
+			if (logLevel <= LogLevel::FATAL)
+				std::cout << object << std::endl;
+		}
 	};
 }
 
