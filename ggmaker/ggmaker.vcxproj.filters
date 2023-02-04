@@ -41,9 +41,6 @@
     <ClInclude Include="src\ggmaker\core\log.h">
       <Filter>ggmaker\core</Filter>
     </ClInclude>
-    <ClInclude Include="src\ggmaker\core\window.h">
-      <Filter>ggmaker\core</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ggmaker\core\time.cpp">
@@ -80,9 +77,6 @@
       <Filter>ggmaker\core</Filter>
     </ClCompile>
     <ClCompile Include="src\ggmaker\core\log.cpp">
-      <Filter>ggmaker\core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ggmaker\core\window.cpp">
       <Filter>ggmaker\core</Filter>
     </ClCompile>
   </ItemGroup>

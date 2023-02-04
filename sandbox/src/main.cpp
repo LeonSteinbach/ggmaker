@@ -10,7 +10,7 @@
 class Sandbox : public gg::Application
 {
 public:
-	Sandbox()
+	Sandbox(const char* title, int width, int height) : Application(title, width, height)
 	{
 	}
 
@@ -21,6 +21,21 @@ public:
 	void run() override
 	{
 		Application::run();
+	}
+
+	void init() override
+	{
+		Application::init();
+	}
+
+	void update(short elapsedMilliseconds) override
+	{
+		Application::update(elapsedMilliseconds);
+	}
+
+	void render() override
+	{
+		Application::render();
 	}
 };
 
@@ -79,7 +94,7 @@ int main()
 	*/
 
 	// Application
-	auto app = new Sandbox();
+	auto app = new Sandbox("ggmaker", 1280, 720);
 	app->run();
 
 	delete app;
