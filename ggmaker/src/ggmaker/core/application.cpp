@@ -7,7 +7,7 @@
 
 namespace gg
 {
-	Application::Application(const char* title, int width, int height) : title(title), size({ width, height })
+	Application::Application(const std::string& title, int width, int height) : title(title), size({ width, height })
 	{
 		GG_LOG_SET_LOG_LEVEL(Log::LogLevel::TRACE);
 
@@ -22,7 +22,7 @@ namespace gg
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 		glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
-		window = glfwCreateWindow(size[0], size[1], title, nullptr, nullptr);
+		window = createWindow(title, size);
 
 		if (!window)
 		{
@@ -39,6 +39,27 @@ namespace gg
 		glfwDestroyWindow(window);
 		glfwTerminate();
 	}
+
+	Application::Application(const Application& other) : window(createWindow(other.title, other.size)), title(other.title), size(other.size)
+	{
+	}
+
+	Application& Application::operator=(const Application& other)
+	{
+		if (this != &other)
+		{
+			window = createWindow(other.title, other.size);
+			title = other.title;
+			size = other.size;
+		}
+		return *this;
+	}
+
+	GLFWwindow* Application::createWindow(const std::string& title, const std::array<int, 2>& size)
+	{
+		return glfwCreateWindow(size[0], size[1], title.c_str(), nullptr, nullptr);
+	}
+
 
 	void Application::run()
 	{

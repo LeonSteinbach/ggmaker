@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <array>
 
 #include "ggmaker/core.h"
@@ -11,12 +12,17 @@ namespace gg
 	{
 	protected:
 		GLFWwindow* window;
-		const char* title;
+		std::string title;
 		std::array<int, 2> size;
 
+		static GLFWwindow* createWindow(const std::string& title, const std::array<int, 2>& size);
+
 	public:
-		Application(const char* title, int width, int height);
-		~Application();
+		Application(const std::string& title, int width, int height);
+		virtual ~Application();
+
+		Application(const Application& other);
+		Application& operator=(const Application& other);
 
 		virtual void run();
 		virtual void init();
