@@ -2,12 +2,14 @@
 
 #include <iostream>
 
+#include "ggmaker/core.h"
+
 namespace gg
 {
-	class Log
+	class GG_API Log
 	{
 	public:
-		enum class LogLevel
+		enum class GG_API LogLevel
 		{
 			TRACE,
 			DEBUG,
@@ -18,57 +20,27 @@ namespace gg
 			OFF
 		};
 
-	private:
-		static Log instance;
-		LogLevel logLevel = LogLevel::TRACE;
-
-	public:
 		static Log& getInstance();
-		void init(LogLevel logLevel);
+		static void setLogLevel(LogLevel logLevel);
 
-		template<typename T> void trace(T& object)
+		static LogLevel logLevel;
+
+		template<typename T> static void log(LogLevel level, T& object)
 		{
-			if (logLevel <= LogLevel::TRACE)
+			if (logLevel <= level)
 				std::cout << object << std::endl;
 		}
 
-		template<typename T> void debug(T& object)
-		{
-			if (logLevel <= LogLevel::DEBUG)
-				std::cout << object << std::endl;
-		}
-
-		template<typename T> void info(T& object)
-		{
-			if (logLevel <= LogLevel::INFO)
-				std::cout << object << std::endl;
-		}
-
-		template<typename T> void warning(T& object)
-		{
-			if (logLevel <= LogLevel::WARNING)
-				std::cout << object << std::endl;
-		}
-
-		template<typename T> void error(T& object)
-		{
-			if (logLevel <= LogLevel::ERROR)
-				std::cout << object << std::endl;
-		}
-
-		template<typename T> void fatal(T& object)
-		{
-			if (logLevel <= LogLevel::FATAL)
-				std::cout << object << std::endl;
-		}
+	private:
+		Log() = default;
 	};
+
+	#define GG_LOG_SET_LOG_LEVEL(...)    ::gg::Log::setLogLevel(__VA_ARGS__)
+
+	#define GG_LOG_TRACE(...)   ::gg::Log::getInstance().log(::gg::Log::LogLevel::TRACE, __VA_ARGS__)
+	#define GG_LOG_DEBUG(...)   ::gg::Log::getInstance().log(::gg::Log::LogLevel::DEBUG, __VA_ARGS__)
+	#define GG_LOG_INFO(...)    ::gg::Log::getInstance().log(::gg::Log::LogLevel::INFO, __VA_ARGS__)
+	#define GG_LOG_WARNING(...) ::gg::Log::getInstance().log(::gg::Log::LogLevel::WARNING, __VA_ARGS__)
+	#define GG_LOG_ERROR(...)   ::gg::Log::getInstance().log(::gg::Log::LogLevel::ERROR, __VA_ARGS__)
+	#define GG_LOG_FATAL(...)   ::gg::Log::getInstance().log(::gg::Log::LogLevel::FATAL, __VA_ARGS__)
 }
-
-#define GG_LOG_INIT(...)    ::gg::Log::getInstance().init(__VA_ARGS__)
-
-#define GG_LOG_TRACE(...)   ::gg::Log::getInstance().trace(__VA_ARGS__)
-#define GG_LOG_DEBUG(...)   ::gg::Log::getInstance().debug(__VA_ARGS__)
-#define GG_LOG_INFO(...)    ::gg::Log::getInstance().info(__VA_ARGS__)
-#define GG_LOG_WARNING(...) ::gg::Log::getInstance().warning(__VA_ARGS__)
-#define GG_LOG_ERROR(...)   ::gg::Log::getInstance().error(__VA_ARGS__)
-#define GG_LOG_FATAL(...)   ::gg::Log::getInstance().fatal(__VA_ARGS__)

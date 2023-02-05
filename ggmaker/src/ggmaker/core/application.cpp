@@ -2,12 +2,15 @@
 #include <chrono>
 
 #include "ggmaker/core/application.h"
+
 #include "ggmaker/core/log.h"
 
 namespace gg
 {
 	Application::Application(const char* title, int width, int height) : title(title), size({ width, height })
 	{
+		GG_LOG_SET_LOG_LEVEL(Log::LogLevel::TRACE);
+
 		if (!glfwInit())
 		{
 			GG_LOG_ERROR("Failed to initialize GLWF");
@@ -39,8 +42,6 @@ namespace gg
 
 	void Application::run()
 	{
-		GG_LOG_INIT(Log::LogLevel::TRACE);
-
 		GG_LOG_TRACE("Starting ggmaker engine");
 
 		init();

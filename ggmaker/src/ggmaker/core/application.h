@@ -16,7 +16,7 @@ namespace gg
 
 	public:
 		Application(const char* title, int width, int height);
-		virtual ~Application();
+		~Application();
 
 		virtual void run();
 		virtual void init();

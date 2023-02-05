@@ -2,14 +2,16 @@
 
 namespace gg
 {
+	Log::LogLevel Log::logLevel = LogLevel::TRACE;
+
 	Log& Log::getInstance()
 	{
 		static Log instance;
 		return instance;
 	}
 
-	void Log::init(LogLevel logLevel)
+	void Log::setLogLevel(LogLevel _logLevel)
 	{
-		this->logLevel = logLevel;
+		logLevel = _logLevel;
 	}
 }

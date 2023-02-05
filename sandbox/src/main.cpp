@@ -14,7 +14,7 @@ public:
 	{
 	}
 
-	~Sandbox() override
+	~Sandbox()
 	{
 	}
 
@@ -94,7 +94,7 @@ int main()
 	*/
 
 	// Application
-	auto app = new Sandbox("ggmaker", 1280, 720);
+	const auto app = new Sandbox("ggmaker", 1280, 720);
 	app->run();
 
 	delete app;
